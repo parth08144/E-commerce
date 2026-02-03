@@ -1,0 +1,18 @@
+<h2>Add Product</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input name="name" placeholder="Product Name"><br>
+    <select name="product_type">
+        <option value="jet">Fighter Jet</option>
+        <option value="missile">Missile</option>
+    </select><br>
+
+    <textarea name="description"></textarea><br>
+    <input name="price" type="number"><br>
+    <input name="range_km" type="number"><br>
+    <input name="speed"><br>
+
+    <input type="file" name="image"><br>
+    <button type="submit">Add</button>
+</form>
